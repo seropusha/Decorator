@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		00CD9B4F7DF145443D15A3470B142B4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1228EB4F00FBFBA28FFEF046AFDD90B2 /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BD9E2B76D68FE7BB720E06250472ED /* Decorator.swift */; };
 		1BFBC52FDE85BD80AFDF8C9E3EE555C4 /* Pods-Decorator_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F05CD5C4C5D3D1F54398BA23B7B0DE92 /* Pods-Decorator_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5DE750F9FEA5049FDA63626508DD8D7E /* Pods-Decorator_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3161B5D2612F13614B34C5A42B86FB4F /* Pods-Decorator_Tests-dummy.m */; };
 		5E0360447E97E9BDDA6A18D500A4173B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		76A053192A43CC373A6758F17D31CF38 /* Pods-Decorator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8E2BE1D060DFBD6E5C5B9A8837D42E8 /* Pods-Decorator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F7B77683BE1749D23CAC89995CF5918 /* Decorator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EE8BE26917D6B275C387F8355F48D17 /* Decorator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A46DC57A977BCBCAD5ED1C2B449F121F /* Decorator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA08A3A2A7DE3C769EB080D92702DC9D /* Decorator-dummy.m */; };
 		BAEB5E6C740BC39E190CB2D4746B5985 /* Pods-Decorator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E818275A7CB530BB36544550BDAC6 /* Pods-Decorator_Example-dummy.m */; };
 		BD80964FB01934712514266E1665A21C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		CC1502D247A721F6C24ED50CFDAFD083 /* Decorator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA08A3A2A7DE3C769EB080D92702DC9D /* Decorator-dummy.m */; };
-		FCDDFD88C16855661AC6B9402A5EE7C6 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FB201B8A71552AD6E24AAB72131D76 /* ReplaceMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,7 @@
 		28D755FF87DAD16C9DBF6515E6D7E242 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3161B5D2612F13614B34C5A42B86FB4F /* Pods-Decorator_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Decorator_Tests-dummy.m"; sourceTree = "<group>"; };
 		4705C36CE41D3FFF88FB0A57C44A78B6 /* Pods-Decorator_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Decorator_Example.modulemap"; sourceTree = "<group>"; };
+		49BD9E2B76D68FE7BB720E06250472ED /* Decorator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
 		4E415391D2EA69976A86D7E978D3BDF9 /* Pods-Decorator_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Decorator_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		549F7B1EC773C2DF6D8E58D9F6C639BF /* Pods-Decorator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Decorator_Example.release.xcconfig"; sourceTree = "<group>"; };
 		54DAD4AB1B4A20023BE1818364D82871 /* Pods-Decorator_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Decorator_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		6A5CB98A38F81AD6FF00E09B6861A518 /* Pods-Decorator_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Decorator_Example-resources.sh"; sourceTree = "<group>"; };
 		775A7D2D2BEDB624F23CD512310E0FCC /* Decorator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Decorator-prefix.pch"; sourceTree = "<group>"; };
 		78DEE14F1449EA2BB404EE15BDDA9DF0 /* Pods-Decorator_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Decorator_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		78FB201B8A71552AD6E24AAB72131D76 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		7A454A034202486399D3D0314D72DD95 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EE8BE26917D6B275C387F8355F48D17 /* Decorator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Decorator-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -92,15 +92,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CC30B37CFD762EFDF5CF2B25F9EA343 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				78FB201B8A71552AD6E24AAB72131D76 /* ReplaceMe.swift */,
-			);
-			name = Classes;
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		0D206D0BCF35D0A3A421F43114A0834D /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +138,7 @@
 		7D22CF31494EB1F39DD67FCD2A2BB620 /* Decorator */ = {
 			isa = PBXGroup;
 			children = (
-				0CC30B37CFD762EFDF5CF2B25F9EA343 /* Classes */,
+				890A27123969D4BC9766C4128B56528B /* Classes */,
 			);
 			name = Decorator;
 			path = Decorator;
@@ -162,6 +153,15 @@
 				0D206D0BCF35D0A3A421F43114A0834D /* Products */,
 				5D89433BC494445FF2D9F8284029060B /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		890A27123969D4BC9766C4128B56528B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				49BD9E2B76D68FE7BB720E06250472ED /* Decorator.swift */,
+			);
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		A0F360AFF54B1E9780B7F389483CA018 /* Development Pods */ = {
@@ -258,7 +258,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F0197548CB48E94BAAC5A296947F298 /* Build configuration list for PBXNativeTarget "Decorator" */;
 			buildPhases = (
-				8CDE465D53AED27A3BA94C28CEFEB8EF /* Sources */,
+				86F748134870C4BD3E2EF38182F1D1BF /* Sources */,
 				6FADEB2168A1ECF48EDF93E15B650B90 /* Frameworks */,
 				D85B3E070062A91CAC10261A517FD5CF /* Headers */,
 			);
@@ -335,12 +335,12 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8CDE465D53AED27A3BA94C28CEFEB8EF /* Sources */ = {
+		86F748134870C4BD3E2EF38182F1D1BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC1502D247A721F6C24ED50CFDAFD083 /* Decorator-dummy.m in Sources */,
-				FCDDFD88C16855661AC6B9402A5EE7C6 /* ReplaceMe.swift in Sources */,
+				A46DC57A977BCBCAD5ED1C2B449F121F /* Decorator-dummy.m in Sources */,
+				1228EB4F00FBFBA28FFEF046AFDD90B2 /* Decorator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
