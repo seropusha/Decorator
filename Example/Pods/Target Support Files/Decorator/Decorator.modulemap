@@ -1,0 +1,6 @@
+framework module Decorator {
+  umbrella header "Decorator-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Decorator",
+  "version": "0.1.0",
+  "summary": "A short description of Decorator.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/iwheelbuy/Decorator",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "iwheelbuy": "iwheelbuy@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/iwheelbuy/Decorator.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Decorator/Classes/**/*"
+}

@@ -1,0 +1,16 @@
+PODS:
+  - Decorator (0.1.0)
+
+DEPENDENCIES:
+  - Decorator (from `../`)
+
+EXTERNAL SOURCES:
+  Decorator:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Decorator: bd1b3a553b0f122e484af6ef7b082dbb2a98a54f
+
+PODFILE CHECKSUM: f193aad6ffdfc3c8b2399b00e8868bd6ef81a17f
+
+COCOAPODS: 1.2.1
