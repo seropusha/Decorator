@@ -1,5 +1,5 @@
-# git tag 0.1.0
-# git push origin 0.1.0
+# git tag 0.1.1
+# git push origin 0.1.1
 # pod lib lint Decorator.podspec --no-clean
 # pod spec lint Decorator.podspec --allow-warnings
 # pod trunk push Decorator.podspec
@@ -7,7 +7,7 @@
 Pod::Spec.new do |s|
 
     s.name                  = 'Decorator'
-    s.version               = '0.1.0'
+    s.version               = '0.1.1'
     s.summary               = 'A short description of Decorator.'
     s.description           = 'A detailed description of Decorator.'
     s.homepage              = 'https://github.com/iwheelbuy/Decorator'
