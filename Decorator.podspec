@@ -8,8 +8,8 @@ Pod::Spec.new do |s|
 
     s.name                  = 'Decorator'
     s.version               = '0.1.1'
-    s.summary               = 'A short description of Decorator.'
-    s.description           = 'A detailed description of Decorator.'
+    s.summary               = 'Generic decorator for UIView or any other class'
+    s.description           = 'Generic decorator for UIView or any other class. Was created for habrahabr article purposes'
     s.homepage              = 'https://github.com/iwheelbuy/Decorator'
     s.license               = { :type => 'MIT', :file => 'LICENSE' }
     s.author                = { 'iwheelbuy' => 'iwheelbuy@gmail.com' }
