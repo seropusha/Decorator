@@ -59,10 +59,12 @@ public extension DecorationCompatible {
         }
     }
     
-    func prepare(look: AnyHashable, decoration: @escaping Decoration<Self>) {
+    func prepare(look key: AnyHashable, decoration value: @escaping Decoration<Self>) {
         var looks = self.looks
-        looks[look] = decoration
+        looks[key] = value
         self.looks = looks
+        guard let look = self.look else { return }
+        self.look = look
     }
 }
 
