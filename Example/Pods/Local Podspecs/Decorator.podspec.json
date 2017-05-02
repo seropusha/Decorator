@@ -1,6 +1,6 @@
 {
   "name": "Decorator",
-  "version": "0.2.3",
+  "version": "0.3.1",
   "summary": "typealias Decoration<T> = (T) -> Void",
   "description": "Generic decorator for UIView or any other class",
   "homepage": "https://github.com/iwheelbuy/Decorator",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/iwheelbuy/Decorator.git",
-    "tag": "0.2.3"
+    "tag": "0.3.1"
   },
   "platforms": {
     "ios": "8.0"

@@ -1,5 +1,5 @@
 PODS:
-  - Decorator (0.2.3)
+  - Decorator (0.3.1)
 
 DEPENDENCIES:
   - Decorator (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Decorator: c9d18d002887995da4daad711e5557d8a11cae00
+  Decorator: 3d431ac3cc9266af2e0e84f93e9c1990e4f8e5d9
 
 PODFILE CHECKSUM: f249e1280fc53e8ff4c8d0c503755a6193c09f99
 

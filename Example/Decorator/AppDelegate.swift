@@ -8,7 +8,7 @@ import QuartzCore
     lazy var labels: [UILabel]  = Array<Int>([0,1,2,3]).map({ self.getLabel(UIScreen.main.bounds.rectForLabel($0)) })
 }
 
-extension NSObject: DecoratorCompatible {}
+extension NSObject: DecorationCompatible {}
 
 extension CGRect {
     
@@ -32,6 +32,14 @@ extension AppDelegate {
     
     func getLabel(_ frame: CGRect) -> UILabel {
         let view = UILabel()
+        view.prepare(look: 0, decoration: Look.backgroundLight + Look.fontTitle + Look.corners(rounded: false))
+        view.prepare(look: 1, decoration: Look.backgroundLight + Look.fontTitle + Look.corners(rounded: true))
+        view.prepare(look: 2, decoration: Look.backgroundLight + Look.fontNormal + Look.corners(rounded: false))
+        view.prepare(look: 3, decoration: Look.backgroundLight + Look.fontNormal + Look.corners(rounded: true))
+        view.prepare(look: 4, decoration: Look.backgroundDark + Look.fontTitle + Look.corners(rounded: false))
+        view.prepare(look: 5, decoration: Look.backgroundDark + Look.fontTitle + Look.corners(rounded: true))
+        view.prepare(look: 6, decoration: Look.backgroundDark + Look.fontNormal + Look.corners(rounded: false))
+        view.prepare(look: 7, decoration: Look.backgroundDark + Look.fontNormal + Look.corners(rounded: true))
         view.text = "Some title"
         view.textAlignment = .center
         view.textColor = UIColor.orange
@@ -42,23 +50,14 @@ extension AppDelegate {
     
     func prepareLabels() {
         Set<UILabel>(labels).decorator
-            + Style.alpha
-            + Style.backgroundDark
-            + Style.fontNormal
-        for index in 0 ... 3 {
-            let label = labels[index]
-            switch index {
-            case 0:     label.decorator.apply(Style.corners(rounded: false))
-            case 1:     label.decorator.apply(Style.backgroundLight, Style.corners(rounded: true))
-            case 2:     label.decorator.apply(Style.fontTitle, Style.corners(rounded: true))
-            case 3:     label.decorator.apply(Style.backgroundLight, Style.fontTitle, Style.corners(rounded: false))
-            default:    break
-            }
-        }
+            + Look.alpha
+            + Look.backgroundDark
+            + Look.fontNormal
+        labels.forEach({ $0.look = Int(arc4random_uniform(8)) })
     }
 }
 
-struct Style {
+struct Look {
     
     static var alpha: Decoration<UIView> {
         return { (view: UIView) -> Void in

@@ -15,7 +15,7 @@ Decorator is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'Decorator', '0.2.3'
+pod 'Decorator', '0.3.1'
 ```
 
 ## Author
