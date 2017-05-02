@@ -4,14 +4,29 @@ public typealias Decoration<T> = (T) -> Void
 
 public struct Decorator<T> {
     
-    let object: T
+    let objects: [T]
+}
+
+public extension Decorator where T: DecoratorCompatible {
     
-    public func apply(_ decorations: Decoration<T>...) -> Void {
-        decorations.forEach({ $0(object) })
+    @discardableResult
+    func apply(_ decorations: Decoration<T>...) -> Decorator<T> {
+        objects.forEach({ object in
+            decorations.forEach({ decoration in
+                decoration(object)
+            })
+        })
+        return self
+    }
+    
+    @discardableResult
+    static func +(decorator: Decorator, decoration: @escaping Decoration<T>) -> Decorator {
+        decorator.apply(decoration)
+        return decorator
     }
 }
 
-public protocol DecoratorCompatible {
+public protocol DecoratorCompatible: class {
     
     associatedtype DecoratorCompatibleType
     
@@ -21,6 +36,13 @@ public protocol DecoratorCompatible {
 public extension DecoratorCompatible {
     
     var decorator: Decorator<Self> {
-        return Decorator(object: self)
+        return Decorator(objects: [self])
+    }
+}
+
+public extension Array where Element: DecoratorCompatible {
+    
+    var decorator: Decorator<Element> {
+        return Decorator(objects: self)
     }
 }

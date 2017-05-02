@@ -8,7 +8,7 @@ import QuartzCore
     lazy var labels: [UILabel]  = Array<Int>([0,1,2,3]).map({ self.getLabel(UIScreen.main.bounds.rectForLabel($0)) })
 }
 
-extension UILabel: DecoratorCompatible {}
+extension NSObject: DecoratorCompatible {}
 
 extension CGRect {
     
@@ -41,12 +41,16 @@ extension AppDelegate {
     }
     
     func prepareLabels() {
+        labels.decorator
+            + Style.alpha
+            + Style.backgroundDark
+            + Style.fontNormal
         for index in 0 ... 3 {
             let label = labels[index]
             switch index {
-            case 0:     label.decorator.apply(Style.backgroundDark, Style.fontNormal, Style.corners(rounded: false))
-            case 1:     label.decorator.apply(Style.backgroundLight, Style.fontNormal, Style.corners(rounded: true))
-            case 2:     label.decorator.apply(Style.backgroundDark, Style.fontTitle, Style.corners(rounded: true))
+            case 0:     label.decorator.apply(Style.corners(rounded: false))
+            case 1:     label.decorator.apply(Style.backgroundLight, Style.corners(rounded: true))
+            case 2:     label.decorator.apply(Style.fontTitle, Style.corners(rounded: true))
             case 3:     label.decorator.apply(Style.backgroundLight, Style.fontTitle, Style.corners(rounded: false))
             default:    break
             }
@@ -55,6 +59,12 @@ extension AppDelegate {
 }
 
 struct Style {
+    
+    static var alpha: Decoration<UIView> {
+        return { (view: UIView) -> Void in
+            view.alpha = 0.8
+        }
+    }
     
     static var backgroundDark: Decoration<UIView> {
         return { (view: UIView) -> Void in
@@ -67,7 +77,7 @@ struct Style {
             view.backgroundColor = UIColor.groupTableViewBackground
         }
     }
-    
+
     static var fontNormal: Decoration<UILabel> {
         return { (view: UILabel) -> Void in
             view.font = UIFont.systemFont(ofSize: 14.0)
@@ -90,8 +100,9 @@ struct Style {
             case true:
                 let mask = CAShapeLayer()
                 let size = CGSize(width: 10, height: 10)
-                let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: .allCorners, cornerRadii: size).cgPath
-                mask.path = path
+                let rect = view.bounds
+                let path = UIBezierPath(roundedRect: rect, byRoundingCorners: .allCorners, cornerRadii: size)
+                mask.path = path.cgPath
                 view.layer.mask = mask
             default:
                 view.layer.mask = nil

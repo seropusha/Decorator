@@ -1,6 +1,6 @@
 {
   "name": "Decorator",
-  "version": "0.1.3",
+  "version": "0.2.2",
   "summary": "Manage your objects styles using this awesome decorator",
   "description": "Generic decorator for UIView or any other class. Was created for habrahabr article purposes",
   "homepage": "https://github.com/iwheelbuy/Decorator",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/iwheelbuy/Decorator.git",
-    "tag": "0.1.3"
+    "tag": "0.2.2"
   },
   "platforms": {
     "ios": "8.0"
