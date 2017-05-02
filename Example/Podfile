@@ -1,11 +1,8 @@
 use_frameworks!
 
 target 'Decorator_Example' do
-  pod 'Decorator', :path => '../'
-
-  target 'Decorator_Tests' do
-    inherit! :search_paths
-
-    
-  end
+    pod 'Decorator', :path => '../'
+    target 'Decorator_Tests' do
+        inherit! :search_paths
+    end
 end

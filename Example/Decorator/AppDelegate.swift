@@ -41,7 +41,7 @@ extension AppDelegate {
     }
     
     func prepareLabels() {
-        labels.decorator
+        Set<UILabel>(labels).decorator
             + Style.alpha
             + Style.backgroundDark
             + Style.fontNormal

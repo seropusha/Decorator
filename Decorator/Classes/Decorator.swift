@@ -40,9 +40,9 @@ public extension DecoratorCompatible {
     }
 }
 
-public extension Array where Element: DecoratorCompatible {
+public extension Sequence where Iterator.Element: DecoratorCompatible {
     
-    var decorator: Decorator<Element> {
-        return Decorator(objects: self)
+    var decorator: Decorator<Iterator.Element> {
+        return Decorator(objects: Array<Iterator.Element>(self))
     }
 }
